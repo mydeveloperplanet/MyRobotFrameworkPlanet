@@ -10,3 +10,10 @@
 | | ${rc}                       | ${output} =     | Run and Return RC and Output | ${APPLICATION} list_employees
 | | Should Be Equal As Integers | ${rc}           | 0
 | | Should Be Equal             | ${output}       | []
+
+| Add Employee                  | [Documentation] | Verify adding an employee
+| | ${rc}                       | ${output} =     | Run and Return RC and Output | ${APPLICATION} add_employee John Doe
+| | Should Be Equal As Integers | ${rc}           | 0
+| | ${rc}                       | ${output} =     | Run and Return RC and Output | ${APPLICATION} list_employees
+| | Should Be Equal As Integers | ${rc}           | 0
+| | Should Be Equal             | ${output}       | ['John Doe']
