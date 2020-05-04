@@ -16,11 +16,9 @@
 | Add Employee Template         | [Documentation] | Template for verifying adding an employee
 |                               | [Arguments]     | ${first_name}
 |                               | ...             | ${last_name}
-| |                             | Clear Employees List
 | | Add Employee                | first_name=${first_name} | last_name=${last_name}
 | | ${output} =                 | Retrieve Employees List
 | | Should Be Equal             | ${output}       | ['${first_name} ${last_name}']
-| | [Teardown]                  | Clear Employees List
 
 | Clear Employees List          | [Documentation] | Clears the list of employees
 | | ${rc}                       | ${output} =     | Run and Return RC and Output | ${APPLICATION} remove_all_employees
