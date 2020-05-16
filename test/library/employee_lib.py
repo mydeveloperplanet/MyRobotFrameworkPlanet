@@ -51,7 +51,4 @@ def add_employee(application_path, first_name, last_name):
     Examples:
     | Add Employee | ../employee.py | Monty | Python
     """
-    process = subprocess.run(['python3', application_path, 'add_employee', first_name, last_name], check=True,
-                             stdout=subprocess.PIPE, text=True)
-    result = process.stdout.rstrip('\n')
-    return result
+    subprocess.run(['python3', application_path, 'add_employee', first_name, last_name], check=True)
