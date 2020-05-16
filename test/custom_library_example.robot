@@ -4,7 +4,6 @@
 | Library             | library/employee_lib.py
 
 | *** Variables ***   |
-| ${APPLICATION}      | python3 ../employee.py
 | ${APPLICATION_PATH} | ../employee.py
 
 | *** Test Cases ***            |                 |
