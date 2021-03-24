@@ -1,2 +1,2 @@
---exclude 0502,0508,1007
+--exclude 0508
 --report all
